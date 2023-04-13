@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,300&display=swap');
+
+
+/* rootvariables */
+:root {
+    --white: #fff;
+    --black: #111;
+    --grey: #888;
+    --blue: #3a80e9;
+    --darkgrey: #1b1b1b;
+    --green: #61c96f;
+    --red: #f94141;
+}
+
+body {
+  height:200vh;
+    margin: 0;
+    font-family: 'Segoe UI', 'Ubntu', "Fira Sans", "Droid Sans", Verdana, sans-serif;
+    --webkit-font-smoothing: antialiased;
+    --moz-osx-font-smoothing: grayscale;
+    background-color: var(--black);
+    color: var(--white);
+    font-family: 'Inter', sans-serif;
+font-family: 'Poppins', sans-serif;
+}
+
+::selection{
+    background-color: var(--green);
+    color:var(--red);
+}
+
+/* customSCROLLBAR
+ width */
+
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: var(--white);
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background:var(--green);
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background:var(--blue);
+  }
+
+
+
+
+
+
