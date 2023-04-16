@@ -1,18 +1,26 @@
 // App.js
-
+import { Routes,Route} from 'react-router-dom';
 import React from 'react';
 import './App.css';
-import Header from './components/Common/Header';
-import MainComponent from './components/LandingPage/MainComponent';
-//import Footer from './components/Common/Footer';
+import HomePage from './pages/HomePage';
+import DashboardPage from './pages/DashboardPage';
+
+
+
 function App() {
 
   return (
    <div className='App'>
 
-   <Header />
-  <MainComponent/>
-   
+   <Routes>
+
+<Route path='/' element={<HomePage/>} />
+<Route path='/dashboard' element={<DashboardPage />} />
+{/*<Route path='' element={</>} />
+<Route path='' element={</>} />
+<Route path='' element={</>} /> */}
+
+   </Routes>
    </div>
    
    

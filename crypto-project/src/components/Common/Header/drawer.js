@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Drawer from '@mui/material/Drawer';
 import MenuOpenRoundedIcon from '@mui/icons-material/MenuOpenRounded';
 import Button from '@mui/material/Button';
@@ -16,18 +17,18 @@ export default function TemporaryDrawer() {
             onClose={()=> setOpen(false)}
           >
  <div className='drawerlinks'>
-<a href='/'>
+ <Link to='/'>
   <p className='Link'>Home</p>
-</a>
-<a href='/'>
+</Link>
+<Link to='/compare'>
   <p className='Link'>Compare</p>
-</a>
-<a href='/'>
+</Link>
+<Link to='/watchlist'>
   <p className='Link'>Watchlist</p>
-</a>
-<a href='/'>
-  <p className='Link'>Dashboard</p>
-</a>
+</Link>
+<Link to='/dashboard'>
+  <p className='Link' >Dashboard</p>
+</Link>
     </div>
           </Drawer>
 
