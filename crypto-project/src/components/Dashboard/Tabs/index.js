@@ -4,7 +4,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 
-export default function LabTabs() {
+export default function LabTabs({coins}) {
   const [value, setValue] = useState('1');
 
   const handleChange = (event, newValue) => {
@@ -26,8 +26,11 @@ export default function LabTabs() {
             
           </TabList>
         </div>
-        <TabPanel value="grid"><div>mapping for grid</div></TabPanel>
-        <TabPanel value="list"><div>mapping for list</div></TabPanel>
+        <TabPanel value="grid">
+          <div>
+            {coins.map((items,i)=>(<li key={i}>{items.name}</li>))}
+            </div></TabPanel>
+        <TabPanel value="list"><div>{coins.map((items,i)=>(<li key={i}>{items.name}</li>))}</div></TabPanel>
        
       </TabContext>
     </div>
