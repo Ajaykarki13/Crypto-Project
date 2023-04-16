@@ -13,8 +13,8 @@
 }
 
 body {
-  height:200vh;
     margin: 0;
+    padding:0;
     font-family: 'Segoe UI', 'Ubntu', "Fira Sans", "Droid Sans", Verdana, sans-serif;
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;

@@ -4,7 +4,7 @@
     justify-content:space-between;
     align-items: center;
     background-color:var(--black) ;
-    padding:0.8rem 1rem;
+    padding:0.1rem 1.5rem  ;
     position:sticky;
     z-index: 1000;
 }
@@ -41,19 +41,19 @@ a{
     display:none;
 }
 
-@media only screen and (max-width:800px)
+@media only screen and (max-width:860px)
 {
     
     .navbar{padding:1.5rem}
-    .logo{font-size: 1rem;}
+    .logo{font-size: 2.5rem;}
     .Links{display:none;}
-    .drawer{display:block;}
+    .drawer{display:block;width:5rem;}
     .drawerlinks{
-        width:40vw;
+        width:50vw;
         height:100vh;
         background-color: var(--black);
-        padding:1.5rem;
+        padding:2rem;
     }
-    .Link{font-size: 0.9rem;}
+    .Link{font-size: 1rem;}
 }
 
