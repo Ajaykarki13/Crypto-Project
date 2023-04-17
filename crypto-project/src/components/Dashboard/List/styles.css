@@ -1,0 +1,31 @@
+.List-row{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    gap:1rem;
+    padding: 0.5rem;
+    margin: 1rem;
+    }
+
+    .List-row td{
+        position:static;
+        text-align: left;
+    width:20%;
+    }
+
+.List-row:hover{
+    background-color: var(--darkgrey);
+    transition:all 0.3s;
+}
+
+.td-image{
+    width: 3rem !important;
+    margin-right: 2rem;
+}
+
+.td-center-align{
+    text-align: center;
+}
+.td-right-align{
+    text-align: right;
+}

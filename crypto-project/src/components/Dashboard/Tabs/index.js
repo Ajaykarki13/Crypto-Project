@@ -3,7 +3,9 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
-
+import Grid from '../Grid';
+import List from '../List' ;
+import './styles.css'
 export default function LabTabs({coins}) {
   const [value, setValue] = useState('1');
 
@@ -27,10 +29,15 @@ export default function LabTabs({coins}) {
           </TabList>
         </div>
         <TabPanel value="grid">
-          <div>
-            {coins.map((items,i)=>(<li key={i}>{items.name}</li>))}
-            </div></TabPanel>
-        <TabPanel value="list"><div>{coins.map((items,i)=>(<li key={i}>{items.name}</li>))}</div></TabPanel>
+          <div className='grid-flex'>
+            {coins.map((coin,i)=>(<Grid coin={coin} key={i}/>))}
+            </div>
+            </TabPanel>
+        <TabPanel value="list">
+          <div className='list-table'>
+            {coins.map((coin,i)=>(<List coin={coin} key={i}/>))}
+            </div>
+            </TabPanel>
        
       </TabContext>
     </div>

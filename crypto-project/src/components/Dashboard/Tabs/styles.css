@@ -1,0 +1,15 @@
+.grid-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    flex-flow: wrap;
+}
+
+.list-table{
+    width:85%;
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: auto;
+}
