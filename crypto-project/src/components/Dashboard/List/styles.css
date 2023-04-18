@@ -8,7 +8,7 @@
     }
 
     .List-row td{
-        position:static;
+       
         text-align: left;
     width:20%;
     }
@@ -28,4 +28,27 @@
 }
 .td-right-align{
     text-align: right;
+}
+
+.mobile-td-mkt{
+    display: none;
+}
+
+@media only screen and (max-width: 1000px){
+    .td-icon{
+        display:none;
+    }
+    
+    .td-volume{
+        display:none;
+    }
+    
+}
+@media only screen and (max-width: 800px){
+    .desktop-td-mkt{
+        display: none;
+    }
+    .mobile-td-mkt{
+        display: block;
+    }
 }
