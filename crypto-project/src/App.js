@@ -4,7 +4,7 @@ import React from 'react';
 import './App.css';
 import HomePage from './pages/HomePage';
 import DashboardPage from './pages/DashboardPage';
-
+import CoinPage from './pages/Coin';
 
 
 function App() {
@@ -16,12 +16,7 @@ function App() {
 
 <Route path='/' element={<HomePage/>} />
 <Route path='/dashboard' element={<DashboardPage />} />
-
-
-{/*<Route path='' element={</>} />
-<Route path='' element={</>} />
-<Route path='' element={</>} /> */}
-
+<Route path='/coin/:id' element={<CoinPage />} />
    </Routes>
    </div>
    
