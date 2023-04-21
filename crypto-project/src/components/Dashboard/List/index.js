@@ -5,9 +5,10 @@ import TrendingDownSharpIcon from '@mui/icons-material/TrendingDownSharp';
 import { Tooltip } from '@mui/material';
 import './styles.css';
 import { convertNumber } from '../../../functions/convertNumber';
-
+import { Link } from 'react-router-dom';
 function List({ coin }) {
     return (
+        <Link to = {`/coin/${coin.id}`}>
         <tr className='List-row'>
 
             <td className='info=flex'>
@@ -55,7 +56,7 @@ function List({ coin }) {
                 </td>
             </Tooltip>
         </tr>
-
+        </Link>
     )
 }
 

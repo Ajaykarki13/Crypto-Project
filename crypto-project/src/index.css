@@ -65,10 +65,14 @@ font-family: 'Poppins', sans-serif;
 .grey-wrapper{
   display:block;
   width:90%;
-  padding:0 0.5rem;
+  padding: 1rem;
   background-color: var(--darkgrey);
   margin:1.5rem auto;
   border-radius: 0.8rem;
+
 }
 
+.grey-wrapper > h2,p{
+margin:1rem;
+}
 
