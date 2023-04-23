@@ -5,9 +5,10 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import Grid from '../Grid';
 import List from '../List';
-import './styles.css'
+import './styles.css';
+
 export default function LabTabs({ coins }) {
-  const [value, setValue] = useState('1');
+  const [value, setValue] = useState('grid');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);

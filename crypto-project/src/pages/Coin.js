@@ -7,8 +7,8 @@ import { coinObject } from '../functions/convertObject';
 import CoinInfo from '../components/Coin/Coininfo';
 import {getCoinData} from '../functions/getCoinData';
 import {getCoinPrices} from '../functions/getCoinPrices';
-import LineChart from '../components/Coin/LineChart/lineChart';
 import SelectDays from '../components/Coin/SelectDays';
+import LineChart from '../components/Coin/LineChart/lineChart';
 import { settingChartData } from '../functions/settingChartData';
 import PriceType from '../components/Coin/PriceType';
 
@@ -28,36 +28,35 @@ function CoinPage() {
 
     async function getData()
     {
-      
       const data = await getCoinData(id);
       if(data){
         coinObject(setCoinData,data)
         const prices = await getCoinPrices(id,days,priceType);
-        if(prices.length > 0)
-        {settingChartData(setChartData,prices);
+        if(prices.length){
+        settingChartData(setChartData,prices);
           setIsLoading(false);
-        }}}
-          
+        }}
+      }       
 
     const handleDays =async (event) => {
       setIsLoading(true);
       setDays(event.target.value);
       const prices = await getCoinPrices(id,event.target.value,priceType);
-      if(prices.length > 0){
+     if(prices.length){
 
         settingChartData(setChartData,prices)
         setIsLoading(false)
-      }
+     }
     };
 
     const handleTypeChange = async (event, newType) => {
       setIsLoading(true);
       setPriceType(newType);
       const prices = await getCoinPrices(id,days,newType);
-      if(prices.length>0){
+     if(prices.length){
         settingChartData(setChartData,prices)
         setIsLoading(false)
-      }
+     }
     };
 
   return (

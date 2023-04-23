@@ -1,15 +1,18 @@
 import TrendingUpSharpIcon from '@mui/icons-material/TrendingUpSharp';
 import TrendingDownSharpIcon from '@mui/icons-material/TrendingDownSharp';
+import StarBorderIcon from '@mui/icons-material/StarBorder';
+import { handleArray } from '../../../functions/localstorage';
 import './styles.css'
 import React from 'react'
 import { Link } from 'react-router-dom';
 function Grid({ coin, i }) {
+
   return (
-    <Link to = {`/coin/${coin.id}`}>
+  //  <Link to = {`/coin/${coin.id}`}>
     <div
       className={`grid-container ${coin.price_change_percentage_24h < 0 && 'grid-container-red'}`}
     >
-      <div className='info=flex'>
+      <div className='info-flex'>
         <img src={coin.image} alt='' className='coin-logo' />
         <div className='name-col'>
           <p className='coin-symbol'>{coin.symbol}</p>
@@ -20,12 +23,15 @@ function Grid({ coin, i }) {
         (<div className='chip-flex'>
           <div className='price-chip'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
           <div className='icon-chip'><TrendingUpSharpIcon /></div>
+          <div className='icon-chip' onClick={()=> handleArray(coin.id)}> <StarBorderIcon/>    </div>
 
 
         </div>) :
         (<div className='chip-flex'>
           <div className='price-chip chip-red'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
           <div className='icon-chip chip-red'><TrendingDownSharpIcon /></div>
+          <div className='icon-chip chip-red' onClick={()=> handleArray(coin.id)}> <StarBorderIcon   />    </div>
+
         </div>)
       }
       <div className='info-container'>
@@ -38,7 +44,7 @@ function Grid({ coin, i }) {
       </div>
 
     </div>
-    </Link>
+ //   </Link>
   )
 }
 

@@ -3,10 +3,10 @@ import React from 'react';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
-export default function SelectDays({days,handleDays}) {
+export default function SelectDays({days,handleDays, noPTag}) {
   return (
     <div className='select-days'>
-        <p>Price Change in</p>
+       {!noPTag && <p>Price Change in</p>} 
         <Select
         sx={{
             height: "2.5rem",
