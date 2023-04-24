@@ -1,17 +1,37 @@
 
-import React from 'react';
+import React,{useState} from 'react';
 import TrendingUpSharpIcon from '@mui/icons-material/TrendingUpSharp';
 import TrendingDownSharpIcon from '@mui/icons-material/TrendingDownSharp';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-
+import { addWatch } from '../../../functions/addToWatch';
+import { removeWatch } from '../../../functions/removeWatch';
 import { Tooltip } from '@mui/material';
 import './styles.css';
 import { convertNumber } from '../../../functions/convertNumber';
 import { Link } from 'react-router-dom';
 
 function List({ coin }) {
+
+    
+    const[clik,setClik] = useState(true);
+
+    function handleClick(id){
+
+        if(clik===true)
+        {
+      addWatch(id)
+       setClik(false);
+       }else if(clik===false)
+       
+       {
+      removeWatch(id)
+      setClik(true);
+       }
+      }
+
     return (
-        <Link to={`/coin/${coin.id}`}>
+     //   <Link to={`/coin/${coin.id}`}>
+     <>
             <tr className='List-row'>
 
                 <td className='info-flex'>
@@ -32,6 +52,7 @@ function List({ coin }) {
                         <div className='icon-chip td-icon'>
                             <TrendingUpSharpIcon />
                             </div>
+                            <div className='icon-chip td-icon'  onClick = {() => handleClick(coin.id)}> <StarBorderIcon/>    </div> 
 
 
                     </td>) :
@@ -42,9 +63,10 @@ function List({ coin }) {
                         <div className='icon-chip chip-red td-icon'>
                             <TrendingDownSharpIcon />
                             </div>
+                            <div className='icon-chip chip-red td-icon'  onClick = {() => handleClick(coin.id)} > <StarBorderIcon/>    </div> 
+
                     </td>)
                 }
-                <td>   <div className='star-icon'> <StarBorderIcon/>    </div> </td>
                 <Tooltip title="Current Price">
                     <td>
                         <h3 className='coin-price td-center-align' style={{
@@ -69,7 +91,8 @@ function List({ coin }) {
                     </td>
                 </Tooltip>
             </tr>
-        </Link>
+            </>
+      //  </Link>
     )
 }
 

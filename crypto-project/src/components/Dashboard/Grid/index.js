@@ -1,14 +1,31 @@
 import TrendingUpSharpIcon from '@mui/icons-material/TrendingUpSharp';
 import TrendingDownSharpIcon from '@mui/icons-material/TrendingDownSharp';
 import StarBorderIcon from '@mui/icons-material/StarBorder';
-import { handleArray } from '../../../functions/localstorage';
 import './styles.css'
-import React from 'react'
+import React,{useState} from 'react'
 import { Link } from 'react-router-dom';
-function Grid({ coin, i }) {
+import { removeWatch } from '../../../functions/removeWatch';
+import { addWatch } from '../../../functions/addToWatch';
 
+
+  const Grid = ({ coin}) => {
+const[clicked,setClicked] = useState(true);
+
+function handleClick(id){
+
+  if(clicked===true)
+  {
+addWatch(id)
+ setClicked(false);
+ }else if(clicked===false)
+ 
+ {
+removeWatch(id)
+setClicked(true);
+ }
+}
   return (
-  //  <Link to = {`/coin/${coin.id}`}>
+//   <Link to = {`/coin/${coin.id}`}>
     <div
       className={`grid-container ${coin.price_change_percentage_24h < 0 && 'grid-container-red'}`}
     >
@@ -22,15 +39,19 @@ function Grid({ coin, i }) {
       {coin.price_change_percentage_24h > 0 ?
         (<div className='chip-flex'>
           <div className='price-chip'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
-          <div className='icon-chip'><TrendingUpSharpIcon /></div>
-          <div className='icon-chip' onClick={()=> handleArray(coin.id)}> <StarBorderIcon/>    </div>
+          <div className='icon-chip}}'><TrendingUpSharpIcon /></div>
+          <div className='icon-chip'
+           onClick = {() => handleClick(coin.id)} > <StarBorderIcon/>    </div>
 
 
         </div>) :
         (<div className='chip-flex'>
           <div className='price-chip chip-red'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
           <div className='icon-chip chip-red'><TrendingDownSharpIcon /></div>
-          <div className='icon-chip chip-red' onClick={()=> handleArray(coin.id)}> <StarBorderIcon   />    </div>
+          <div className='icon-chip chip-red' 
+        onClick = {() => handleClick(coin.id)} > 
+          <StarBorderIcon   />  
+            </div>
 
         </div>)
       }
@@ -44,7 +65,7 @@ function Grid({ coin, i }) {
       </div>
 
     </div>
- //   </Link>
+// </Link>
   )
 }
 

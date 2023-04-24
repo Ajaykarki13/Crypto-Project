@@ -32,12 +32,12 @@ export default function LabTabs({ coins }) {
         </div>
         <TabPanel value="grid">
           <div className='grid-flex'>
-            {coins.map((coin, i) => (<Grid coin={coin} key={i} />))}
+            {coins.map((coin,i) => (<Grid coin={coin}  key ={i} />))}
           </div>
         </TabPanel>
         <TabPanel value="list">
           <div className='list-table'>
-            {coins.map((coin, i) => (<List coin={coin} key={i} />))}
+            {coins.map((coin,i) => (<List coin={coin} key={i} />))}
           </div>
         </TabPanel>
 
