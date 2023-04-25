@@ -1,11 +1,15 @@
 
-
+import Share from '../../Share';
 import React from 'react'
 import './styles.css'
 function Footer() {
   return (
-    <div className='footer'>
-        Footer
+  <div className='footer'>
+  <h2 style={{color:"var(--black)"}}>Crypto Currency Tracker</h2>
+    <div className='footer-icon'>
+        <Share />
+        </div>
+
         </div>
   )
 }

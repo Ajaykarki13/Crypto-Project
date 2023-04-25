@@ -1,12 +1,28 @@
-import React from 'react';
+import React,{useState} from 'react';
 import './styles.css';
 import Button from '../../Common/Button';
 import iphone from '../../../assets/iphone 1.png';
 import gradient from '../../../assets/gradient 1.png';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import Share from '../../Share';
 
 
 function MainComponent() {
+
+  const [showShare, setShowShare] = useState(false);
+
+function handleClick()
+{
+  if(showShare===false){
+    setShowShare(true)
+  }
+  else if(showShare===true)
+  {
+    setShowShare(false)
+  }
+}
+  
   return <div className='flex-info'>
     <div className='left'>
       <motion.h1 className='track-crypto-heading'
@@ -27,8 +43,12 @@ function MainComponent() {
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 1 }}
         transition={{ duration: 2.5 }}>
-        <Button text='Dashboard' />
-        <Button text='Share' outlined={true} />
+ <Link to='/dashboard'>
+          <Button text='Dashboard' handleClick={() => console.log('btn clickd')} />
+        </Link>
+        
+        <Button text='Share' outlined={true} handleClick={()=>handleClick()}/>
+        {showShare && <Share />}
       </motion.div>
 
     </div>
@@ -49,7 +69,7 @@ function MainComponent() {
       <img src={gradient} className='gradient' alt='grd' />
 
     </div>
-
   </div>
+  
 }
 export default MainComponent;

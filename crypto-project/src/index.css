@@ -37,7 +37,7 @@ font-family: 'Poppins', sans-serif;
  width */
 
 ::-webkit-scrollbar {
-    width: 0.9rem;
+    width: 0.5rem;
   }
   
   /* Track */
