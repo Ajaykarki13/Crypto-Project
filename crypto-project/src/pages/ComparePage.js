@@ -23,7 +23,7 @@ function ComparePage() {
     const [chartData, setChartData] = useState({});
 
 
-    useEffect(() => { getData() }, []);
+    useEffect(() => { getData() 
 
     async function getData() {
         setIsLoading(true);
@@ -41,15 +41,16 @@ function ComparePage() {
         }
 
     }
+}, []);
 
    async function handleDays(event) {
     setIsLoading(true);
 
         setDays(event.target.value)
         const prices1 = await getCoinPrices(crypto1, event.target.value, priceType);
-                const prices2 = await getCoinPrices(crypto2,event.target.value, priceType);
-                settingChartData(setChartData, prices1, prices2);
-                setIsLoading(false);
+        const prices2 = await getCoinPrices(crypto2,event.target.value, priceType);
+            settingChartData(setChartData, prices1, prices2);
+            setIsLoading(false);
 
     }
 
@@ -70,18 +71,20 @@ function ComparePage() {
             setCrypto2(event.target.value);
             const data = await getCoinData(event.target.value);
             coinObject(setCrypto2Data, data);
-            const prices1 = await getCoinPrices(crypto1, days, priceType);
-            const prices2 = await getCoinPrices(crypto2, days, priceType);
-            if (prices1.length && prices2.length ) {
-                setIsLoading(false);
-            }}
+        }
             else {
                 setCrypto1(event.target.value)
                 const data = await getCoinData(event.target.value);
                 coinObject(setCrypto1Data, data);
             }
+            const prices1 = await getCoinPrices(crypto1, days, priceType);
+            const prices2 = await getCoinPrices(crypto2, days, priceType);
+            if (prices1.length>0 && prices2.length>0 ) {
+                setIsLoading(false);
+            }}
+         
 
-    }
+    
     
     return (
         <div>

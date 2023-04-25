@@ -4,12 +4,7 @@ import {get100Coins} from "../../../functions/get100Coins";
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 
-function SelectCoins({ crypto1, crypto2, handleCoinChange}) {
-  
-    const [allCoins, setAllCoins] = useState([]);
-    useEffect(()=>{getData()},[])
-
-    const styles = {
+const styles = {
         height: "2.5rem",
         color: "var(--white)",
         "& .MuioutlinedInput-notchedOutline": {
@@ -25,8 +20,13 @@ function SelectCoins({ crypto1, crypto2, handleCoinChange}) {
         },
     };
 
-   
 
+function SelectCoins({ crypto1, crypto2, handleCoinChange}) {
+  
+    
+   
+    const [allCoins, setAllCoins] = useState([]);
+    useEffect(()=>{getData()},[])
 
     async function getData() {
         const myCoins = await get100Coins();

@@ -29,13 +29,13 @@ export default function PriceType({priceType,handleTypeChange}) {
         }}
       
     >
-      <ToggleButton value="prices" aria-label="left aligned">
-        Price
+      <ToggleButton value="prices" aria-label="right aligned">
+        Prices
       </ToggleButton>
       <ToggleButton value="market_caps" aria-label="centered">
         Market Cap
       </ToggleButton>
-      <ToggleButton value="total_volumes" aria-label="right aligned">
+      <ToggleButton value="total_volumes" aria-label="left aligned">
         Total volume
       </ToggleButton>
       

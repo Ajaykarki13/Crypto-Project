@@ -1,6 +1,9 @@
 
 import React, { useState } from 'react'
 import './styles.css' ;
+
+
+
 function CoinInfo({heading,desc}) {
 const shortdesc = desc.slice(0,200) + "<span style='color:var(--grey)'>Read more...</span>";
 const longdesc = desc;
