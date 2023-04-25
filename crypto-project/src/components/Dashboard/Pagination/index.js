@@ -4,26 +4,25 @@ import Pagination from '@mui/material/Pagination';
 import './styles.css';
 export default function Paginationx({ page, handlePageChange }) {
 
+    const styles =  {
+        color: 'var(--white)',
+        "& .Mui-selected": {
+            backgroundColor: "var(--blue) !important",
+            color: "#fff !important",
+            borderColor: "var(--blue) !important"
+        },
+        "& .MuiPaginationItem-ellipsis": {
+            border: "0px solid var(--grey) !important",
+        },
+        "& .MuiPaginationItem-text": {
+            color: "var(--white)",
+            border: "1px solid var(--grey)"
+        }
+    }
     return (
         <div className='pagination'>
             <Pagination count={10} page={page} onChange={(e, value) => handlePageChange(e, value)}
-                sx={
-                    {
-                        color: 'var(--white)',
-                        "& .Mui-selected": {
-                            backgroundColor: "var(--blue) !important",
-                            color: "#fff !important",
-                            borderColor: "var(--blue) !important"
-                        },
-                        "& .MuiPaginationItem-ellipsis": {
-                            border: "0px solid var(--grey) !important",
-                        },
-                        "& .MuiPaginationItem-text": {
-                            color: "var(--white)",
-                            border: "1px solid var(--grey)"
-                        }
-                    }
-                }
+                sx={styles }
             />
         </div>
     );

@@ -7,7 +7,9 @@ import CoinPage from './pages/Coin';
 import ComparePage from './pages/ComparePage'
 import WatchlistPage from './pages/WatchlistPage';
 import { ToastContainer } from 'react-toastify';
-import  'react-toastify/dist/ReactToastify.css'
+import  'react-toastify/dist/ReactToastify.css';
+
+
 function App() {
 
   return (

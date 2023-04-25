@@ -4,6 +4,8 @@ import Button from '../../Common/Button';
 import iphone from '../../../assets/iphone 1.png';
 import gradient from '../../../assets/gradient 1.png';
 import { motion } from 'framer-motion';
+
+
 function MainComponent() {
   return <div className='flex-info'>
     <div className='left'>

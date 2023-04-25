@@ -7,6 +7,14 @@ import Grid from '../Grid';
 import List from '../List';
 import './styles.css';
 
+
+const style = {
+  color: 'var(--white)', width: '50vw', fontSize: '1,2rem',
+  fontWeight: '600',
+  fontFamily: 'Inter', textTransform: 'capitalize',
+}
+
+
 export default function LabTabs({ coins }) {
   const [value, setValue] = useState('grid');
 
@@ -14,11 +22,7 @@ export default function LabTabs({ coins }) {
     setValue(newValue);
   };
 
-  const style = {
-    color: 'var(--white)', width: '50vw', fontSize: '1,2rem',
-    fontWeight: '600',
-    fontFamily: 'Inter', textTransform: 'capitalize',
-  }
+  
 
   return (
     <div>
