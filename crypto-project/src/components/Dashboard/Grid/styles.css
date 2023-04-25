@@ -73,6 +73,7 @@
     transition: all 0.3s;
 }
 
+
 .chip-red{
     border:2px solid var(--red) !important;
     color:var(--red) !important;
@@ -82,6 +83,7 @@
     color:var(--white) !important;
     transition: all 0.3s;
 }
+
 .icon-chip{
     border:2px solid var(--green);
     border-radius: 50%;

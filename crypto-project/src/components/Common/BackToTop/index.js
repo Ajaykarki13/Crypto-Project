@@ -10,9 +10,9 @@ function BackToTop() {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+  if (document.body.scrollTop > 30 || document.documentElement.scrollTop > 30) {
     mybutton.style.display = "flex";
-  } else {
+   }else {
     mybutton.style.display = "none";
   }
 }
