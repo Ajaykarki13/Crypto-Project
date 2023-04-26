@@ -6,7 +6,7 @@
     --white: #fff;
     --black: #111;
     --grey: #888;
-    --blue: #3a80e9;
+    --blue: #daff36b2;
     --darkgrey: #1b1b1b;
     --green: #61c96f;
     --red: #f94141;
@@ -64,7 +64,7 @@ font-family: 'Poppins', sans-serif;
 
 .grey-wrapper{
   display:block;
-  width:90%;
+  width:89%;
   padding: 1rem;
   background-color: var(--darkgrey);
   margin:1.5rem auto;
@@ -82,4 +82,28 @@ margin:1rem;
   align-items: center;
    gap:2rem;
   margin:1.5rem ; 
+}
+
+@media only screen and (max-width:650px){
+  .grey-wrapper{
+    display:block;
+    width:100%;
+    padding: 0.5rem;
+    background-color: var(--darkgrey);
+    margin:0.5rem auto;
+    border-radius: 0.5rem;
+  
+  }
+  
+  .grey-wrapper > h2,p{
+  margin:0.3rem;
+  }
+  
+  .coins-days-flex {
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+     gap:0.5rem;
+    margin:0.5rem ; 
+  }
 }

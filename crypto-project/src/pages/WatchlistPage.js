@@ -3,6 +3,7 @@ import React, {useState, useEffect} from 'react'
 import Header from '../components/Common/Header';
 import { get100Coins } from '../functions/get100Coins';
 import LabTabs from '../components/Dashboard/Tabs';
+import BackToTop from '../components/Common/BackToTop';
 
 function WatchlistPage() {
   const [coins, setCoins] = useState([]);
@@ -25,6 +26,7 @@ function WatchlistPage() {
   return (
     <>
       <Header />
+      <BackToTop/>
       <LabTabs coins={coins} />
     </>
   )

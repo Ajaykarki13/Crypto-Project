@@ -57,3 +57,21 @@ a{
     .Link{font-size: 1rem;}
 }
 
+@media only screen and (max-width:650px)
+{
+    *{
+        box-sizing: border-box;
+    }
+    
+    .navbar{padding:1rem}
+    .logo{font-size: 2rem;}
+    .Links{display:none;}
+    .drawer{display:block;width:5rem;}
+    .drawerlinks{
+        width:50vw;
+        height:100vh;
+        background-color: var(--black);
+        padding:2rem;
+    }
+    .Link{font-size: 0.5rem;}
+}

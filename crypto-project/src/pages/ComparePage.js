@@ -11,8 +11,11 @@ import { coinObject } from "../functions/convertObject";
 import { getCoinData } from "../functions/getCoinData";
 import { getCoinPrices } from '../functions/getCoinPrices';
 import { settingChartData } from "../functions/settingChartData";
+import Footer from '../components/Common/Footer';
+import BackToTop from '../components/Common/BackToTop';
 
 function ComparePage() {
+    
     const [crypto1, setCrypto1] = useState("bitcoin");
     const [crypto2, setCrypto2] = useState("ethereum");
     const [crypto1Data, setCrypto1Data] = useState({});
@@ -87,8 +90,10 @@ function ComparePage() {
     
     
     return (
+        <>
         <div>
             <Header />
+            <BackToTop/>
             {isLoading ? (<Loader />) : (
                 <>
                     <div className='coins-days-flex'>
@@ -116,10 +121,13 @@ function ComparePage() {
                     
                     <CoinInfo heading={crypto1Data.name} desc={crypto1Data.desc} />
                     <CoinInfo heading={crypto2Data.name} desc={crypto2Data.desc} />
+                    <div><Footer /></div>
+
                 </>
             )}
         </div>
-
+       
+        </>
     )
 }
 

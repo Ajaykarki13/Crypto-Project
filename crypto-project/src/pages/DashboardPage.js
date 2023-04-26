@@ -56,15 +56,17 @@ function DashboardPage() {
         <BackToTop/>
         
 { isLoading ? (<Loader/>) :
-   ( <div>
+   ( <><div>
       <Search search={search} handleChange={handleChange} />
       <LabTabs coins={search ? filteredCoins : paginatedcoins} />
       {!search && (<Paginationx page={page} handlePageChange={handlePageChange} />)}
-      <Footer/>
+      
     </div>
+    <div><Footer /></div>
+
+    </>
    )
 }
-
 
 </>
   )

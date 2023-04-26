@@ -5,7 +5,7 @@ import './styles.css'
 function Footer() {
   return (
   <div className='footer'>
-  <h2 style={{color:"var(--black)"}}>Crypto Currency Tracker</h2>
+  <h2 style={{color:"var(--white)"}}>CryptoCurrency Tracker.</h2>
     <div className='footer-icon'>
         <Share />
         </div>

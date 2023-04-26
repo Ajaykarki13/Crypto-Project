@@ -35,14 +35,14 @@ const Grid = ({ coin }) => {
         </div>
         {coin.price_change_percentage_24h > 0 ?
           (<div className='chip-flex'>
-            <div className='price-chip'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
+            <div className='price-chipg'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
             <div className='icon-chip td-icon'><TrendingUpSharpIcon /></div>
             <div className='icon-chip' onClick={handleWatchListClick}>
               {isWatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
             </div>
           </div>) :
           (<div className='chip-flex'>
-            <div className='price-chip chip-red'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
+            <div className='price-chipg chip-red'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
             <div className='icon-chip chip-red'><TrendingDownSharpIcon /></div>
             <div className='icon-chip chip-red' onClick={handleWatchListClick}>
               {isWatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
@@ -50,7 +50,7 @@ const Grid = ({ coin }) => {
           </div>)
         }
         <div className='info-container'>
-          <h3 className='coin-price' style={{
+          <h3 className='coin-priceg' style={{
             color: coin.price_change_percentage_24h < 0 ? 'var(--red)' : 'var(--green)',
           }}>${coin.current_price.toLocaleString()}</h3>
           <p className='total-volume'>Total Volume : {coin.total_volume.toLocaleString()}</p>

@@ -11,6 +11,8 @@ import SelectDays from '../components/Coin/SelectDays';
 import LineChart from '../components/Coin/LineChart/lineChart';
 import { settingChartData } from '../functions/settingChartData';
 import PriceType from '../components/Coin/PriceType';
+import Footer from '../components/Common/Footer';
+import BackToTop from '../components/Common/BackToTop';
 
 function CoinPage() {
 
@@ -23,8 +25,7 @@ function CoinPage() {
     const[priceType,setPriceType] = useState("prices")
 
     useEffect(()=>{  if(id){
-     getData();
-    }},[id]);
+   
 
     async function getData()
     {
@@ -36,7 +37,8 @@ function CoinPage() {
         settingChartData(setChartData,prices);
           setIsLoading(false);
         }}
-      }       
+      }         getData();
+    }},[id]);
 
     const handleDays =async (event) => {
       setIsLoading(true);
@@ -60,10 +62,13 @@ function CoinPage() {
     };
 
   return (
-    <div>
+    <>
         <Header/>
+        <BackToTop/>
         {
-        isLoading ?(<Loader/> ):(<><div className='grey-wrapper'>
+        isLoading ?(<Loader/> ):(
+        <>
+        <div className='grey-wrapper'>
             <List coin={coinData}/>
             </div>
 
@@ -74,9 +79,12 @@ function CoinPage() {
               </div>
 
             <CoinInfo heading={coinData.name} desc={coinData.desc}/>
-            </>) 
+            <div><Footer /></div>
+
+            </>
+            ) 
             }
-        </div>
+        </>
   )
 }
 

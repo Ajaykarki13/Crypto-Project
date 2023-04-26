@@ -25,3 +25,18 @@
 .search-flex input:focus{
     outline:none;
 }
+
+@media only screen and (max-width:600px){
+    .search-flex{
+      
+        padding:1rem;
+        color:var(--green);
+        background-color: var(--darkgrey);
+        gap:1rem;
+        width:95%;
+        margin:0.5rem;
+        border-radius: 3rem;
+        position:relative;
+        left:0.5rem;
+    }
+}
