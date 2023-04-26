@@ -19,6 +19,7 @@ html {
 body {
     margin: 0;
     padding:0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', 'Ubntu', "Fira Sans", "Droid Sans", Verdana, sans-serif;
     --webkit-font-smoothing: antialiased;
     --moz-osx-font-smoothing: grayscale;
@@ -86,8 +87,8 @@ margin:1rem;
 
 @media only screen and (max-width:650px){
   .grey-wrapper{
-    display:block;
-    width:100%;
+    
+    width:90%;
     padding: 0.5rem;
     background-color: var(--darkgrey);
     margin:0.5rem auto;
@@ -100,10 +101,10 @@ margin:1rem;
   }
   
   .coins-days-flex {
-    display:flex;
-    justify-content:flex-start;
-    align-items: center;
-     gap:0.5rem;
-    margin:0.5rem ; 
+   
+     gap:0;
+    margin-left:10px; 
+    margin-right:0px;
   }
+ 
 }

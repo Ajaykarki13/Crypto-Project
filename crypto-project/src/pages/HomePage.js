@@ -5,13 +5,12 @@ import MainComponent from '../components/LandingPage/MainComponent';
 
 function HomePage() {
   return (
-    <div>
+    <>
 
 <Header/>
 <MainComponent />
 
-
-    </div>
+    </>
   )
 }
 

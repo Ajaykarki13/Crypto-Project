@@ -57,15 +57,15 @@
     }
     
 }
-@media only screen and (max-width: 800px){
+@media only screen and (max-width: 850px){
     .desktop-td-mkt{
         display: none;
     }
     .mobile-td-mkt{
-        display: block;
+        display: none;
     }
 }
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 750px) {
     .List-row {
       display: flex;
       align-items: flex-start;

@@ -14,6 +14,6 @@
 }
 @media only screen and (max-width:750px){
     .back-to-top-btn{
-        display:none;
+        display:none !important;
     }
 }

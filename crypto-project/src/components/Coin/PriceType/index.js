@@ -25,12 +25,13 @@ export default function PriceType({priceType,handleTypeChange}) {
   return (
     <div className='toggle-prices'>
     <ToggleButtonGroup
+     color="secondary"
       value={priceType}
       exclusive
       onChange={handleTypeChange}
       sx={styles}
       >
-      <ToggleButton value="prices" aria-label="right aligned">
+      <ToggleButton value="prices" aria-label="right aligned ">
         Prices
       </ToggleButton>
       <ToggleButton value="market_caps" aria-label="centered">

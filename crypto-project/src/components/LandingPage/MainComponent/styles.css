@@ -3,6 +3,7 @@
     justify-content:space-between;
     align-items: flex-start;
     padding:0.3rem 1.5rem;
+
 }
 .track-crypto-heading , .real-time-heading{
 
@@ -87,9 +88,10 @@ right:0;
     .flex-info{
         flex-flow: column;
         align-items:center;
+      
     }
     .right-phone{
-        display: block;   
+     
     margin-top: 3rem;
     left:30%;
     }
