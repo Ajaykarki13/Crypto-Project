@@ -1,6 +1,5 @@
 
 import './styles.css';  
-
 import React from 'react';
 import ToggleButton from '@mui/material/ToggleButton';
 import ToggleButtonGroup from '@mui/material/ToggleButtonGroup';
@@ -31,12 +30,15 @@ export default function PriceType({priceType,handleTypeChange}) {
       onChange={handleTypeChange}
       sx={styles}
       >
+
       <ToggleButton value="prices" aria-label="right aligned ">
         Prices
       </ToggleButton>
+
       <ToggleButton value="market_caps" aria-label="centered">
         Market Cap
       </ToggleButton>
+      
       <ToggleButton value="total_volumes" aria-label="left aligned">
         Total volume
       </ToggleButton>

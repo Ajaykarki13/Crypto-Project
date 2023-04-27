@@ -26,19 +26,24 @@ function handleClick()
   return <div className='flex-info'>
     <div className='left'>
       <motion.h1 className='track-crypto-heading'
-
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 1 }}
         transition={{ duration: 1 }}
-      >Track Crypto</motion.h1>
+      >Track Crypto
+      </motion.h1>
+
       <motion.h1 className='real-time-heading'
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 1 }}
-        transition={{ duration: 1.5 }}>Real Time.</motion.h1>
+        transition={{ duration: 1.5 }}>Real Time.
+        </motion.h1>
+
       <motion.p className='info-text'
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 1 }}
-        transition={{ duration: 2 }}>Track crypto in real time. Visit the dashboard now!</motion.p>
+        transition={{ duration: 2 }}>Track crypto in real time. Visit the dashboard now!
+        </motion.p>
+
       <motion.div className='btn-flex'
         initial={{ opacity: 0, x: -40 }}
         animate={{ opacity: 1, x: 1 }}
@@ -53,10 +58,8 @@ function handleClick()
 
     </div>
 
-    <div className='right-phone'
-
-
-    >
+    <div className='right-phone'>
+      
       <motion.img src={iphone} className='iphone' alt='img'
         initial={{ x: -10 }}
         animate={{ x: 10 }}
