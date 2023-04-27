@@ -20,7 +20,7 @@ import React from 'react'
 
 const Share = () => {
   const shareUrl = 'https://trackcryptoaj.netlify.app/';
-  const title = 'Crypto Tracker App';
+  const title = 'Crypto Tracker App : Now track and wishlist top 100 cryptocurrencies';
 
   return (
     <>
