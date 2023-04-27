@@ -39,6 +39,7 @@ const Grid = ({ coin }) => {
           (<div className='chip-flex'>
             <div className='price-chipg'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
             <div className='icon-chip td-icon'><TrendingUpSharpIcon /></div>
+
             <div className='icon-chip' onClick={handleWatchListClick}>
               {isWatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
             </div>
@@ -46,6 +47,7 @@ const Grid = ({ coin }) => {
           (<div className='chip-flex'>
             <div className='price-chipg chip-red'>{coin.price_change_percentage_24h.toFixed(2)}%</div>
             <div className='icon-chip chip-red'><TrendingDownSharpIcon /></div>
+            
             <div className='icon-chip chip-red' onClick={handleWatchListClick}>
               {isWatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
             </div>

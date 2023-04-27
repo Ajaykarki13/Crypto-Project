@@ -26,8 +26,9 @@ function WatchlistPage() {
   return (
     <>
       <Header />
-      <BackToTop/>
-      <LabTabs coins={coins} />
+      { coins.length===0?(<h1 style={{textAlign:'center'}}>No currency added !</h1>):(<><BackToTop/>
+      <LabTabs coins={coins} /></>)}
+      
     </>
   )
 }

@@ -19,7 +19,7 @@ import {
 import React from 'react'
 
 const Share = () => {
-  const shareUrl = 'https://example.com';
+  const shareUrl = 'https://trackcryptoaj.netlify.app/';
   const title = 'Crypto Tracker App';
 
   return (
