@@ -54,8 +54,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap:1rem;
-    margin:1rem 1.5rem;
+    gap: 1rem;
+    margin: 1rem 0.5rem 0rem 1rem;
 }
 
 .price-chipg{

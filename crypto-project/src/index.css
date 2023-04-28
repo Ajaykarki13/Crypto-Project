@@ -10,6 +10,7 @@
     --darkgrey: #1b1b1b;
     --green: #61c96f;
     --red: #f94141;
+    --blue2:#5c6ccbd1;
 }
 
 html {
@@ -30,8 +31,8 @@ font-family: 'Poppins', sans-serif;
 }
 
 ::selection{
-    background-color: var(--green);
-    color:var(--red);
+    background-color: var(--blue2);
+    color:var(--white);
 }
 
 /* customSCROLLBAR
@@ -88,7 +89,7 @@ margin:1rem;
 @media only screen and (max-width:650px){
   .grey-wrapper{
     
-    width:90%;
+    width:100%;
     padding: 0.5rem;
     background-color: var(--darkgrey);
     margin:0.5rem auto;

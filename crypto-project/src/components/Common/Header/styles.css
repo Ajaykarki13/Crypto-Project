@@ -6,7 +6,8 @@
     background-color:var(--black) ;
     padding:0.1rem 1.5rem  ;
     position:sticky;
-    z-index: 1000;
+    top:0;
+    z-index: 100;
    
 }
 
@@ -48,7 +49,7 @@ a{
     .navbar{padding:1.5rem}
     .logo{font-size: 2.5rem;}
     .Links{display:none;}
-    .drawer{display:block;width:5rem;}
+    .drawer{display:block;width:6rem;}
     .drawerlinks{
         width:50vw;
         height:100vh;
