@@ -14,17 +14,17 @@ import { Link } from 'react-router-dom';
 function List({ coin }) {
 
 
-    const [watched, setWatched] = useState(false);
+    const [iswatched, setIsWatched] = useState(false);
     const watchList = JSON.parse(localStorage.getItem('watchlist')) || [];
 
     const handleWatchList = (e) => {
         e.preventDefault();
         if (watchList.includes(coin.id)) {
             removeWatch(coin.id);
-            setWatched(false);
+            setIsWatched(false);
         } else {
             addWatch(coin.id);
-            setWatched(true);
+            setIsWatched(true);
         }
     }
 
@@ -52,7 +52,7 @@ function List({ coin }) {
                                 <TrendingUpSharpIcon />
                             </div>
                             <div className='icon-chip' onClick={handleWatchList}>
-                                {watched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
+                                {iswatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
                             </div>
 
 
@@ -65,7 +65,7 @@ function List({ coin }) {
                                 <TrendingDownSharpIcon />
                             </div>
                             <div className='icon-chip chip-red' onClick={handleWatchList}>
-                                {watched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
+                                {iswatched || watchList.includes(coin.id) ? (<StarOutlinedIcon />) : (<StarBorderIcon />)}
                             </div>
 
                         </td>)

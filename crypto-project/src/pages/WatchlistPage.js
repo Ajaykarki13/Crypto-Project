@@ -14,14 +14,13 @@ function WatchlistPage() {
       const myCoins =  await get100Coins();
       if (myCoins) {
         setCoins(myCoins.filter((coin) => list.includes(coin.id)));
+        setList(JSON.parse(localStorage.getItem('watchlist')))
       }
     };
     getData();
   }, [list]);
 
-  useEffect(() => { 
-    setList(JSON.parse(localStorage.getItem('watchlist')))
-  }, []);
+ 
 
   return (
     <>
