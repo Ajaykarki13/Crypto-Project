@@ -66,7 +66,7 @@ function handleClick()
         transition={{
           type: 'smooth',
           repeatType: 'mirror',
-          duration: 2,
+          duration: 1.9,
           repeat: Infinity
         }} />
       <img src={gradient} className='gradient' alt='grd' />

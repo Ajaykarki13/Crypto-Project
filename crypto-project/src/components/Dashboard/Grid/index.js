@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { removeWatch } from '../../../functions/removeWatch';
 import { addWatch } from '../../../functions/addToWatch';
 import StarOutlinedIcon from '@mui/icons-material/StarOutlined';
+import { motion } from 'framer-motion';
 
 const Grid = ({ coin }) => {
   const [isWatched, setIsWatched] = useState(false);
@@ -26,7 +27,11 @@ const Grid = ({ coin }) => {
   return (
     <Link to={`/coin/${coin.id}`}>
 
-      <div className={`grid-container ${coin.price_change_percentage_24h < 0 && 'grid-container-red'}`}>
+      <motion.div className={`grid-container ${coin.price_change_percentage_24h < 0 && 'grid-container-red'}`}
+      initial={{ opacity: 0, y: +65 }}
+      animate={{ opacity: 1, y: +20 }}
+      transition={{ duration: 1.5 }}
+      >
         <div className='info-flex'>
           <img src={coin.image} alt='' className='coin-logo' />
           <div className='name-col'>
@@ -62,7 +67,7 @@ const Grid = ({ coin }) => {
           <p className='total-volume'>Market Cap : ${coin.market_cap.toLocaleString()}</p>
         </div>
         
-      </div>
+      </motion.div>
     </Link>
   )
 }

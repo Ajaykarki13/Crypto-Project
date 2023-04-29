@@ -10,6 +10,8 @@ import { Tooltip } from '@mui/material';
 import './styles.css';
 import { convertNumber } from '../../../functions/convertNumber';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+
 
 function List({ coin }) {
 
@@ -31,8 +33,10 @@ function List({ coin }) {
     return (
         <Link to={`/coin/${coin.id}`}>
             <>
-                <tr className='List-row'>
-
+                <motion.tr className='List-row'
+                 initial={{ opacity: 0, y: +60 }}
+                 animate={{ opacity: 1, y: 0 }}
+                 transition={{ duration: 1.5 }}>
                     <td className='info-flex'>
                         <img src={coin.image} alt='' className='coin-logo' />
                     </td>
@@ -93,7 +97,7 @@ function List({ coin }) {
                             <p className='total-volume td-right-align'>${convertNumber(coin.market_cap)}</p>
                         </td>
                     </Tooltip>
-                </tr>
+                </motion.tr>
             </>
         </Link>
     )

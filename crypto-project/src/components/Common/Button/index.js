@@ -6,7 +6,8 @@ function Button({text,handleClick,outlined})
 {
 
 return <div className= { outlined?'outlined_btn':'btn' }
- onClick={handleClick}>{text}
+ onClick={handleClick}>
+    {text}
  </div>
 
 }
