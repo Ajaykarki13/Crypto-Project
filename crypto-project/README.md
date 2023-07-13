@@ -1,3 +1,9 @@
+• Built a full responsive real time cryptocurrency tracking website .
+• User can track data weekly/monthly/yearly with help of crypto-chart.
+• Favourite Currency can be added to watchlist 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
